@@ -9,7 +9,7 @@ public partial class ApiBroker
 {
     private const string baseUrl = @"https://newsapi.org/v2/everything?apiKey=1a1d1edff0ce4c5887cd79f250464db0";
     
-    public async ValueTask<IEnumerable<Article>> GetAllArticlesAsync(
+    public async ValueTask<(int TotalPages, List<Article> Articles)> GetArticleCollectionAsync(
         Filter filter)
     {
         StringBuilder relativeStringBuilder = new StringBuilder(baseUrl);
@@ -20,6 +20,6 @@ public partial class ApiBroker
         if (apiReponse.Status.ToUpper() == "ERROR")
             throw new ErrorResponseException(apiReponse.Message ?? "Something went wrong");
 
-        return apiReponse.Articles;
+        return (apiReponse.TotalResults.Value, apiReponse.Articles);
     }
 }

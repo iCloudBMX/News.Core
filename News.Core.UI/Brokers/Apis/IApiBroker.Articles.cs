@@ -4,5 +4,5 @@ namespace News.Core.UI.Brokers.Apis;
 
 public partial interface IApiBroker
 {
-    ValueTask<IEnumerable<Article>> GetAllArticlesAsync(Filter filter);
+    ValueTask<(int TotalPages, List<Article> Articles)> GetArticleCollectionAsync(Filter filter);
 }
