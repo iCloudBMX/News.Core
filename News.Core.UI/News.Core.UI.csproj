@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Brokers\Storages\" />
-    <Folder Include="Views\" />
   </ItemGroup>
 
 </Project>

@@ -7,9 +7,9 @@ namespace News.Core.UI.Services.Articles;
 
 public partial class ArticleService
 {
-    private delegate ValueTask<IEnumerable<Article>> ReturningArticlesFunction();
+    private delegate ValueTask<List<Article>> ReturningArticlesFunction();
 
-    private async ValueTask<IEnumerable<Article>> TryCatch(ReturningArticlesFunction returningArticlesFunction)
+    private async ValueTask<List<Article>> TryCatch(ReturningArticlesFunction returningArticlesFunction)
     {
         try
         {

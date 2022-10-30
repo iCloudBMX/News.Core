@@ -12,7 +12,7 @@ public partial class ArticleService : IArticleService
         this.apiBroker = apiBroker;
     }
 
-    public ValueTask<IEnumerable<Article>> RetrieveAllArticlesAsync(Filter filter) =>
+    public ValueTask<List<Article>> RetrieveAllArticlesAsync(Filter filter) =>
     TryCatch(async () =>
     {
         ValidatePageSize(filter.PageSize);

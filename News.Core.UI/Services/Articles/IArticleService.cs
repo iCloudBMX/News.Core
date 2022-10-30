@@ -4,5 +4,5 @@ namespace News.Core.UI.Services.Articles;
 
 public interface IArticleService
 {
-    ValueTask<IEnumerable<Article>> RetrieveAllArticlesAsync(Filter filter);
+    ValueTask<List<Article>> RetrieveAllArticlesAsync(Filter filter);
 }

@@ -11,6 +11,8 @@ public partial class ApiBroker : IApiBroker
 	public ApiBroker()
 	{
 		httpClient = new HttpClient();
+		
+		httpClient.DefaultRequestHeaders.Add("User-Agent", "ConsoleApp");
     }
 
 	public async ValueTask<T> GetAsync<T>(string relativeUrl)
