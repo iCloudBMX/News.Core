@@ -1,4 +1,7 @@
-﻿using News.Core.UI.Models;
+﻿using News.Core.UI.Brokers.Apis.Exceptions;
+using News.Core.UI.Models;
+using News.Core.UI.Models.Articles;
+using System;
 
 namespace News.Core.UI.Services.Articles;
 
@@ -8,6 +11,21 @@ public partial class ArticleService
 
     private async ValueTask<IEnumerable<Article>> TryCatch(ReturningArticlesFunction returningArticlesFunction)
     {
-        throw new NotImplementedException();
+        try
+        {
+            return await returningArticlesFunction();
+        }
+        catch(ArgumentOutOfRangeException argumentOutOfRangeException)
+        {
+            throw new ServiceException(argumentOutOfRangeException.Message, argumentOutOfRangeException);
+        }
+        catch(ErrorResponseException errorResponseException)
+        {
+            throw new ServiceException(errorResponseException.Message, errorResponseException);
+        }
+        catch (Exception exception)
+        {
+            throw new ServiceException(exception.Message, exception);
+        }
     }
 }
