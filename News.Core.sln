@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Core.UI", "..\News.Core\News.Core.UI\News.Core.UI.csproj", "{7F988F11-8F96-4686-991C-85F71797D846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Core.Tests.Unit", "..\News.Core\News.Core.Tests.Unit\News.Core.Tests.Unit.csproj", "{35CC12C9-2036-42EF-985D-C7F4439CC8DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F988F11-8F96-4686-991C-85F71797D846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F988F11-8F96-4686-991C-85F71797D846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F988F11-8F96-4686-991C-85F71797D846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F988F11-8F96-4686-991C-85F71797D846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35CC12C9-2036-42EF-985D-C7F4439CC8DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CC12C9-2036-42EF-985D-C7F4439CC8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CC12C9-2036-42EF-985D-C7F4439CC8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CC12C9-2036-42EF-985D-C7F4439CC8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B54C6EC7-DD74-429A-965C-CC9071C9AD89}
+	EndGlobalSection
+EndGlobal
